@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-def generate_earth_data(num_samples=1000):
+def generate_earth_data(num_samples=100000):
     """
     Generate synthetic Earth Voltage and Nutrition dataset for planting.
     """
