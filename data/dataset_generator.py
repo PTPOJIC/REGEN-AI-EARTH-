@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import os
 
 def generate_earth_data(num_samples=100000):
     """
@@ -43,4 +44,5 @@ if __name__ == "__main__":
     features.to_csv("data/generated_data/environmental_features.csv", index=False)
     targets.to_csv("data/generated_data/nutrition_targets.csv", index=False)
     print("Dataset generated and saved.")
-  
+# Ensure the target directory exists
+os.makedirs("data/generated_data", exist_ok=True)
