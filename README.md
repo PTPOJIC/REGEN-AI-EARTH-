@@ -142,7 +142,7 @@ This project is licensed under the MIT License.
 
 Contributors
 ------------
-- **Your Name**  
-  [Your Contact Info]  
+- **Kreatif Indonesia**  
+  [PT Pusakaofjava Indonesia Corp 
 
 Feel free to contribute to this project by submitting issues or pull requests!
