@@ -65,10 +65,12 @@ Usage
 -----
 1. Generate Dataset
 ~~~~~~~~~~~~~~~~~~~
+
 Run the dataset generator to create synthetic data for training and testing:
 
 .. code-block:: bash
-
+    mkdir data/generated_data
+    chmod -R 755 data/generated_data
     python data/dataset_generator.py
 
 This generates two CSV files:
