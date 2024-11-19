@@ -46,3 +46,7 @@ if __name__ == "__main__":
     print("Dataset generated and saved.")
 # Ensure the target directory exists
 os.makedirs("data/generated_data", exist_ok=True)
+
+# Replace NaNs with 0 or some meaningful value
+features = np.nan_to_num(features)
+targets = np.nan_to_num(targets)
