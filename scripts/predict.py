@@ -1,6 +1,14 @@
 import torch
 from models.regenerative_model import RegenerativeModel
 import pandas as pd
+import sys
+import os
+
+# Print sys.path for debugging
+print("Python Path:", sys.path)
+
+# Add the root project directory to the path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Load the trained model
 model = RegenerativeModel(input_dim=6, output_dim=3)
