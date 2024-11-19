@@ -33,7 +33,7 @@ criterion = torch.nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 # Train the model
-train_model(model, dataloader, criterion, optimizer, epochs=20)
+train_model(model, dataloader, criterion, optimizer, epochs=99999999)
 
 # Save the model
 save_model(model)
