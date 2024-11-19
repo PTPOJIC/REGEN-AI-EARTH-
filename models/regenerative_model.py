@@ -1,7 +1,11 @@
 import torch
 import torch.nn as nn
 import torch.nn as nn
-
+# Inside models/regenerative_model.py
+class RegenerativeModel:
+    def __init__(self, input_dim, output_dim):
+        pass
+        
 class RegenerativeModel(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(RegenerativeModel, self).__init__()
