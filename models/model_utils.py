@@ -1,20 +1,18 @@
 import torch
 
-def train_model(model, dataloader, criterion, optimizer, epochs=10):
+def train_model(model, dataloader, criterion, optimizer, epochs=20):
     model.train()
     for epoch in range(epochs):
-        total_loss = 0
-        for batch in dataloader:
-            X, y = batch
+        running_loss = 0.0
+        for inputs, targets in dataloader:
             optimizer.zero_grad()
-            outputs = model(X)
-            loss = criterion(outputs, y)
+            outputs = model(inputs)
+            loss = criterion(outputs, targets)
             loss.backward()
             optimizer.step()
-            total_loss += loss.item()
-        print(f"Epoch {epoch+1}/{epochs}, Loss: {total_loss:.4f}")
+            running_loss += loss.item()
+        print(f"Epoch {epoch + 1}/{epochs}, Loss: {running_loss / len(dataloader)}")
 
-def save_model(model, path="trained_model.pth"):
+def save_model(model, path="model.pth"):
     torch.save(model.state_dict(), path)
-    print(f"Model saved at {path}")
-  
+    print(f"Model saved to {path}")
