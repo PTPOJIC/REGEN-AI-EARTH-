@@ -1,16 +1,15 @@
-import torch
-from torch.utils.data import DataLoader, TensorDataset
-from models.regenerative_model import RegenerativeModel
-from models.model_utils import train_model, save_model
-import pandas as pd
 import sys
 import os
 
-# Print sys.path for debugging
-print("Python Path:", sys.path)
-
-# Add the root project directory to the path
+# Add the root directory to the Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from models.regenerative_model import RegenerativeModel
+from models.model_utils import train_model, save_model
+
+import torch
+from torch.utils.data import DataLoader, TensorDataset
+import pandas as pd
 
 # Load data
 features = pd.read_csv("data/generated_data/environmental_features.csv").values
